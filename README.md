@@ -19,7 +19,25 @@ sequenceDiagram
 ```
 ## Exercise 0.5
 ```mermaid
+    browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/spa
+    server-->>browser: HTML document
+
+    browser->>server: GET main.css
     
+    server-->>browser: the css file
+    
+
+    browser->>server: GET spa.js
+ 
+    server-->>browser: the JavaScript file
+    
+
+    Note right of browser: The browser starts executing the JavaScript code that fetches the JSON from the server
+
+    browser->>server: GET data.json
+ 
+    server-->>browser: returns json
+    Note right of browser: The browser executes the callback function that renders the notes
 ```
 ## Exercise 0.6
 ```mermaid
