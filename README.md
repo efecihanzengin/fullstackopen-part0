@@ -21,3 +21,13 @@ sequenceDiagram
 ```mermaid
     
 ```
+## Exercise 0.6
+```mermaid
+    sequenceDiagram
+    note right of Client: After entering text and press the button,
+    note right of Client: JS add note to local list and renders
+    Client->>+Server: POST json data of the input area and date
+    note right of Client: Client sends the data with JS code fetched before
+    Server-->>-Client: Returns HTTP 201 Created
+    note right of Client: Does not redirect, browser stays at same page
+```
